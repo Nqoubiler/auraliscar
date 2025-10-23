@@ -6,164 +6,31 @@
   <title>Auralisca Skincare</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #fef8f3;
-      color: #333;
-    }
-    header {
-      background-color: #bfa06a;
-      color: white;
-      padding: 1rem 2rem;
-      text-align: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
-      letter-spacing: 1px;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      background-color: #1e1e1e;
-      padding: 0.7rem;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 400;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #bfa06a;
-    }
-    .hero {
-      text-align: center;
-      padding: 5rem 2rem;
-      background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), 
-                  url('https://images.unsplash.com/photo-1616506635713-1a52ec0b02a5?auto=format&fit=crop&w=1200&q=80');
-      background-size: cover;
-      background-position: center;
-    }
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      color: #1e1e1e;
-      font-size: 2.8rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      color: #4d4d4d;
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-    .btn {
-      background-color: #bfa06a;
-      color: white;
-      border: none;
-      padding: 0.8rem 1.8rem;
-      font-size: 1rem;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      letter-spacing: 0.5px;
-    }
-    .btn:hover {
-      background-color: #a8894f;
-    }
-    .shop {
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-    .shop h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      color: #1e1e1e;
-    }
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    .product {
-      background-color: rgba(255,255,255,0.85);
-      border-radius: 20px;
-      padding: 1rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .product:hover {
-      transform: scale(1.03);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-    }
-    .product img {
-      width: 100%;
-      border-radius: 15px;
-      height: 250px;
-      object-fit: cover;
-    }
-    .product h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      margin: 0.5rem 0;
-      color: #1e1e1e;
-    }
-    .product p {
-      font-size: 0.9rem;
-      color: #555;
-    }
-    .price {
-      font-weight: 600;
-      color: #bfa06a;
-      margin: 0.5rem 0;
-    }
-    footer {
-      background-color: #1e1e1e;
-      color: white;
-      text-align: center;
-      padding: 1.5rem 1rem;
-      margin-top: 3rem;
-    }
+    body { margin: 0; font-family: 'Poppins', sans-serif; background-color: #fef8f3; color: #333; }
+    header { background-color: #bfa06a; color: white; padding: 1rem 2rem; text-align: center; font-family: 'Playfair Display', serif; font-size: 1.8rem; letter-spacing: 1px; }
+    nav { display: flex; justify-content: center; gap: 1.5rem; background-color: #1e1e1e; padding: 0.7rem; }
+    nav a { color: white; text-decoration: none; font-weight: 400; transition: color 0.3s; }
+    nav a:hover { color: #bfa06a; }
+    .hero { text-align: center; padding: 5rem 2rem; background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('https://images.unsplash.com/photo-1616506635713-1a52ec0b02a5?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; }
+    .hero h1 { font-family: 'Playfair Display', serif; color: #1e1e1e; font-size: 2.8rem; margin-bottom: 1rem; }
+    .hero p { color: #4d4d4d; font-size: 1.2rem; margin-bottom: 2rem; }
+    .btn { background-color: #bfa06a; color: white; border: none; padding: 0.8rem 1.8rem; font-size: 1rem; border-radius: 30px; cursor: pointer; transition: background-color 0.3s; letter-spacing: 0.5px; }
+    .btn:hover { background-color: #a8894f; }
+    .shop { padding: 3rem 2rem; text-align: center; }
+    .shop h2 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 2rem; color: #1e1e1e; }
+    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto; }
+    .product { background-color: rgba(255,255,255,0.85); border-radius: 20px; padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
+    .product:hover { transform: scale(1.03); box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+    .product img { width: 100%; border-radius: 15px; height: 250px; object-fit: cover; }
+    .product h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin: 0.5rem 0; color: #1e1e1e; }
+    .product p { font-size: 0.9rem; color: #555; }
+    .price { font-weight: 600; color: #bfa06a; margin: 0.5rem 0; }
+    footer { background-color: #1e1e1e; color: white; text-align: center; padding: 1.5rem 1rem; margin-top: 3rem; }
 
     /* Cart styles */
-    #cart {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #bfa06a;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 50px;
-      cursor: pointer;
-      z-index: 10000;
-    }
-    #cart-items {
-      display: block;
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 400px;
-      height: 100%;
-      background: white;
-      box-shadow: -4px 0 20px rgba(0,0,0,0.3);
-      z-index: 10001;
-      padding: 1rem;
-      overflow-y: auto;
-      transform: translateX(100%);
-      transition: transform 0.3s;
-    }
-    #cart-overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left:0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.5);
-      z-index:10000;
-    }
+    #cart { position: fixed; top: 20px; right: 20px; background: #bfa06a; color: white; padding: 0.5rem 1rem; border-radius: 50px; cursor: pointer; z-index: 10000; }
+    #cart-items { display: block; position: fixed; top: 0; right: 0; width: 400px; height: 100%; background: white; box-shadow: -4px 0 20px rgba(0,0,0,0.3); z-index: 10001; padding: 1rem; overflow-y: auto; transform: translateX(100%); transition: transform 0.3s; }
+    #cart-overlay { display: none; position: fixed; top: 0; left:0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index:10000; }
   </style>
 </head>
 <body>
@@ -183,7 +50,7 @@
     <h3>Your Cart</h3>
     <div id="cart-products"></div>
     <div style="margin-top:1rem;">
-      <div id="paypal-button-container"></div> <!-- Placeholder -->
+      <div id="paypal-button-container"></div>
     </div>
     <button id="close-cart" class="btn" style="margin-top:1rem;">Close</button>
   </div>
@@ -227,6 +94,9 @@
     <p>Email: contact@auralisca.com</p>
   </footer>
 
+  <!-- PayPal SDK -->
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=ZAR"></script>
+
   <script>
     let cart = [];
     const cartCount = document.getElementById('cart-count');
@@ -245,7 +115,6 @@
         div.style.marginBottom = '1rem';
         div.style.borderBottom = '1px solid #eee';
         div.style.paddingBottom = '1rem';
-
         div.innerHTML = `
           <img src="${item.image}" style="width:60px; height:60px; object-fit:cover; border-radius:10px; margin-right:1rem;">
           <div style="flex:1;">
@@ -265,13 +134,11 @@
     }
 
     document.querySelectorAll('.product .btn').forEach(button => {
-      button.addEventListener('click', e => {
-        e.preventDefault();
+      button.addEventListener('click', () => {
         const product = button.closest('.product');
         const name = product.querySelector('h3').innerText;
         const price = product.querySelector('.price').innerText;
         const image = product.querySelector('img').src;
-
         cart.push({name, price, image});
         cartCount.innerText = cart.length;
         renderCart();
@@ -292,6 +159,29 @@
       cartItemsDiv.style.transform = 'translateX(100%)';
       cartOverlay.style.display = 'none';
     });
+
+    // PayPal Buttons
+    paypal.Buttons({
+      style: { layout: 'vertical', color: 'gold', shape: 'pill', label: 'pay' },
+      createOrder: function(data, actions) {
+        let total = 0;
+        cart.forEach(item => total += parseFloat(item.price.replace('R','')));
+        return actions.order.create({
+          purchase_units: [{ amount: { value: total.toFixed(2) }, description: 'Auralisca Skincare Purchase' }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details) {
+          alert('Transaction completed by ' + details.payer.name.given_name);
+          cart = [];
+          cartCount.innerText = cart.length;
+          renderCart();
+          cartItemsDiv.style.transform = 'translateX(100%)';
+          cartOverlay.style.display = 'none';
+        });
+      },
+      onError: function(err) { alert('Payment failed. Try again.'); console.error(err); }
+    }).render('#paypal-button-container');
   </script>
 </body>
 </html>
