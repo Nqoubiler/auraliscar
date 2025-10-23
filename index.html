@@ -132,6 +132,16 @@
 <body>
   <header>Auralisca </header>
   <nav>
+    
+<div id="cart" style="position:fixed; top:20px; right:20px; background:#bfa06a; color:white; padding:0.5rem 1rem; border-radius:50px; cursor:pointer; z-index:1000;">
+  🛒 Cart (<span id="cart-count">0</span>)
+</div>
+<div id="cart-items" style="position:fixed; top:60px; right:20px; background:white; padding:1rem; border-radius:10px; display:none; max-width:300px; box-shadow:0 2px 10px rgba(0,0,0,0.2); z-index:1000;">
+  <h4>Your Cart</h4>
+  <ul id="cart-list"></ul>
+  <div id="paypal-button-container"></div>
+</div>
+
     <a href="#home">Home</a>
     <a href="#shop">Shop</a>
     <a href="#about">About</a>
@@ -179,4 +189,36 @@
     <p>Email: contact@auralisca.com</p>
   </footer>
 </body>
+  <script>
+let cart = []; 
+const cartCount = document.getElementById('cart-count');
+const cartDiv = document.getElementById('cart');
+const cartItemsDiv = document.getElementById('cart-items');
+const cartList = document.getElementById('cart-list');
+
+document.querySelectorAll('.product .btn').forEach(button => {
+  button.addEventListener('click', (e) => {
+    e.preventDefault(); // prevent form submit
+    const product = button.closest('.product');
+    const name = product.querySelector('h3').innerText;
+    const price = product.querySelector('.price').innerText;
+
+    cart.push({name, price});
+    cartCount.innerText = cart.length;
+
+    alert(`${name} added to cart`);
+  });
+});
+
+
+cartDiv.addEventListener('click', () => {
+  cartItemsDiv.style.display = cartItemsDiv.style.display === 'none' ? 'block' : 'none';
+  cartList.innerHTML = '';
+  cart.forEach(item => {
+    const li = document.createElement('li');
+    li.innerText = `${item.name} - ${item.price}`;
+    cartList.appendChild(li);
+  });
+});
+</script>
 </html>
