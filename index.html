@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auralisca Skincare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f5f1;
+      color: #333;
+    }
+    header {
+      background-color: #d4af37;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      background-color: #2e2e2e;
+      padding: 0.7rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #d4af37;
+    }
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem;
+      background: linear-gradient(rgba(248,245,241,0.9), rgba(248,245,241,0.9)), url('https://images.unsplash.com/photo-1616506635713-1a52ec0b02a5?auto=format&fit=crop&w=1200&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      color: #2e2e2e;
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      color: #444;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      background-color: #d4af37;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.8rem;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .btn:hover {
+      background-color: #bfa033;
+    }
+    .shop {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .shop h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #2e2e2e;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .product {
+      background-color: white;
+      border-radius: 20px;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .product:hover {
+      transform: translateY(-5px);
+    }
+    .product img {
+      width: 100%;
+      border-radius: 15px;
+      height: 250px;
+      object-fit: cover;
+    }
+    .product h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      margin: 0.5rem 0;
+      color: #2e2e2e;
+    }
+    .product p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .price {
+      font-weight: 600;
+      color: #d4af37;
+      margin: 0.5rem 0;
+    }
+    footer {
+      background-color: #2e2e2e;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>Auralisca Skincare</header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <section class="hero" id="home">
+    <h1>Light. Purity. Confidence.</h1>
+    <p>Experience Auralisca — skincare designed to illuminate your natural glow.</p>
+    <button class="btn" onclick="document.getElementById('shop').scrollIntoView({behavior: 'smooth'});">Shop Collection</button>
+  </section>
+  <section class="shop" id="shop">
+    <h2>Our Featured Collection</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=800&q=80" alt="Serum">
+        <h3>Radiance Renewal Serum</h3>
+        <p>Boosts skin hydration and restores glow with vitamin C infusion.</p>
+        <p class="price">R399</p>
+        <form action="https://www.paypal.com/buttons" method="post" target="_blank">
+          <button class="btn">Buy Now</button>
+        </form>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1583912268180-dfb43619c08d?auto=format&fit=crop&w=800&q=80" alt="Moisturizer">
+        <h3>HydraGlow Moisturizer</h3>
+        <p>Lightweight moisturizer with hyaluronic acid for deep hydration.</p>
+        <p class="price">R349</p>
+        <form action="https://www.paypal.com/buttons" method="post" target="_blank">
+          <button class="btn">Buy Now</button>
+        </form>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1617894472585-66c2436f06b3?auto=format&fit=crop&w=800&q=80" alt="Cleanser">
+        <h3>Pure Clarity Cleanser</h3>
+        <p>Gently removes impurities and refreshes your skin’s texture.</p>
+        <p class="price">R299</p>
+        <form action="https://www.paypal.com/buttons" method="post" target="_blank">
+          <button class="btn">Buy Now</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2025 Auralisca Skincare | Crafted with love and light</p>
+    <p>Email: contact@auralisca.com</p>
+  </footer>
+</body>
+</html>
