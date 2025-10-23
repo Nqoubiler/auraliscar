@@ -107,25 +107,43 @@
     const closeCartBtn = document.getElementById('close-cart');
 
     function renderCart() {
-      cartProducts.innerHTML = '';
-      cart.forEach((item, index) => {
-        const div = document.createElement('div');
-        div.style.display = 'flex';
-        div.style.alignItems = 'center';
-        div.style.marginBottom = '1rem';
-        div.style.borderBottom = '1px solid #eee';
-        div.style.paddingBottom = '1rem';
-        div.innerHTML = `
-          <img src="${item.image}" style="width:60px; height:60px; object-fit:cover; border-radius:10px; margin-right:1rem;">
-          <div style="flex:1;">
-            <p style="margin:0; font-weight:600;">${item.name}</p>
-            <p style="margin:0; color:#bfa06a;">${item.price}</p>
-          </div>
-          <button style="border:none; background:red; color:white; padding:0.3rem 0.6rem; border-radius:5px; cursor:pointer;" onclick="removeFromCart(${index})">X</button>
-        `;
-        cartProducts.appendChild(div);
-      });
-    }
+  cartProducts.innerHTML = '';
+
+  const paypalContainer = document.getElementById('paypal-button-container');
+
+  if(cart.length === 0){
+    cartProducts.innerHTML = '<p style="text-align:center; margin-top:2rem; color:#555;">Your cart is empty.</p>';
+    paypalContainer.style.display = 'none'; // hide PayPal button
+    return;
+  } else {
+    paypalContainer.style.display = 'block'; // show PayPal button
+  }
+
+  cart.forEach((item, index) => {
+    const div = document.createElement('div');
+    div.style.display = 'flex';
+    div.style.alignItems = 'center';
+    div.style.marginBottom = '1rem';
+    div.style.borderBottom = '1px solid #eee';
+    div.style.paddingBottom = '1rem';
+
+    div.innerHTML = `
+      <img src="${item.image}" style="width:60px; height:60px; object-fit:cover; border-radius:10px; margin-right:1rem;">
+      <div style="flex:1;">
+        <p style="margin:0; font-weight:600;">${item.name}</p>
+        <p style="margin:0; color:#bfa06a;">${item.price}</p>
+        <div style="margin-top:0.3rem;">
+          <button style="padding:0.2rem 0.5rem; margin-right:0.3rem;" onclick="decreaseQuantity(${index})">-</button>
+          <span id="qty-${index}">${item.quantity}</span>
+          <button style="padding:0.2rem 0.5rem; margin-left:0.3rem;" onclick="increaseQuantity(${index})">+</button>
+        </div>
+      </div>
+      <button style="border:none; background:red; color:white; padding:0.3rem 0.6rem; border-radius:5px; cursor:pointer;" onclick="removeFromCart(${index})">X</button>
+    `;
+    cartProducts.appendChild(div);
+  });
+}
+
 
     function removeFromCart(index) {
       cart.splice(index, 1);
