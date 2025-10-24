@@ -1,0 +1,44 @@
+:root {
+  --taupe: #8B6F47;
+  --taupe-15: rgba(139,111,71,0.15);
+}
+
+/* Replace many uses of pure black with taupe. These rules use !important to
+   override existing declarations when possible without modifying every file.
+   It's still recommended to add the link to this stylesheet to your HTML files
+   or to import it from your main stylesheet. */
+
+body, p, a, h1, h2, h3, h4, h5, h6, span, li, label, button, input, textarea {
+  color: var(--taupe) !important;
+}
+
+/* Common background/border replacements */
+.bg-black, .background-black, .black-bg {
+  background-color: var(--taupe) !important;
+}
+
+/* Inline style attribute matches for black values */
+*[style*="color: black"], *[style*="color:black"],
+*[style*="background-color: black"], *[style*="background-color:black"],
+*[style*="border-color: black"], *[style*="border-color:black"] {
+  color: var(--taupe) !important;
+  background-color: var(--taupe) !important;
+  border-color: var(--taupe) !important;
+}
+
+/* SVG fill/stroke attribute selectors for common black usages */
+svg [fill="#000"], svg [fill="#000000"], svg [fill="black"],
+svg [stroke="#000"], svg [stroke="#000000"], svg [stroke="black"] {
+  fill: var(--taupe) !important;
+  stroke: var(--taupe) !important;
+}
+
+/* Fallback utility classes */
+.text-taupe { color: var(--taupe) !important; }
+.bg-taupe { background-color: var(--taupe) !important; }
+.border-taupe { border-color: var(--taupe) !important; }
+
+/* Keep this file small and safe — consider doing a targeted repo-wide update
+   to replace hard-coded black color literals in source files when you have
+   a chance (this runtime approach is less invasive but may be slightly slower). 
+*/
